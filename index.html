@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quick Command Vault</title>
+    <meta
+      name="description"
+      content="Fast searchable commands, runners, environments and AI prompts."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>Command Vault</h1>
+          <p class="eyebrow">
+            Developed by -
+            <a href="https://sadmanjoy-s058.onrender.com/" target="_blank"
+              >Sadman Joy</a
+            >
+          </p>
+          <br />
+          <p class="subtitle">
+            Search what you want to do. Copy the command. Keep moving.
+          </p>
+        </div>
+        <div class="count" id="count">0 items</div>
+      </header>
+
+      <nav class="filters" aria-label="Categories">
+        <button class="filter active" data-category="Windows">Windows</button>
+        <button class="filter" data-category="CMD">CMD</button>
+        <button class="filter" data-category="Code Runners">
+          Code Runners
+        </button>
+        <button class="filter" data-category="Git">Git</button>
+        <button class="filter" data-category="Kali Linux">Kali Linux</button>
+      </nav>
+
+      <section class="search-wrap">
+        <span class="search-icon">⌕</span>
+        <input
+          id="search"
+          type="search"
+          placeholder="Try: application upgrading, python venv, streamlit, git..."
+          autocomplete="off"
+          autofocus
+        />
+        <kbd>Ctrl K</kbd>
+      </section>
+      <br />
+
+      <section id="results" class="results" aria-live="polite"></section>
+      <div id="empty" class="empty hidden">
+        <div class="empty-icon">⌕</div>
+        <h2>No matching commands</h2>
+        <p>
+          Try a broader phrase such as <b>python</b>, <b>update</b>, <b>git</b>,
+          or <b>AI prompt</b>.
+        </p>
+      </div>
+    </main>
+
+    <div id="toast" class="toast">Copied!</div>
+    <script src="app.js"></script>
+  </body>
+</html>
